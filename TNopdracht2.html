@@ -46,16 +46,24 @@
 				}
 			}
 			function moveLeft(){
-				objImage.style.left=parseInt(objImage.style.left)-53;
+				if (parseInt(objImage.style.left)>0) {
+							objImage.style.left=parseInt(objImage.style.left)-53;
+				}
 			}
 			function moveUp(){
+				if (parseInt(objImage.style.top)>100) {
 				objImage.style.top=parseInt(objImage.style.top)-50;
+				}
 			}
 			function moveRight(){
-				objImage.style.left=parseInt(objImage.style.left)+53;
+				if (parseInt(objImage.style.left)<200) {
+					objImage.style.left=parseInt(objImage.style.left)+53;
+				}
 			}
 			function moveDown(){
+				if (parseInt(objImage.style.top)<250) {
 				objImage.style.top=parseInt(objImage.style.top)+50;
+				}
 			}
 			window.onload=init;
 		</script>
